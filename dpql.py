@@ -342,4 +342,8 @@ with open('dpql.txt', 'a') as fw:
     for rr in episodic_rewards:
         fw.write(str(rr))
         fw.write(' ')
-    fw.write('\n') 
+    fw.write('\n')
+
+# Save the trained policy network
+torch.save(policy_net.state_dict(), 'policy_net.pth')
+print('Policy network saved to policy_net.pth')
